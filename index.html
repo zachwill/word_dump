@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Word Dump</title>
+
+  <meta name="author" content="Zach Williams, @zachwill">
+  <meta name="description" content="Blatantly stolen from Pragmatic Thinking.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- HTML5 shim, for IE support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="css/bootstrap-complete.css">
+  <link rel="stylesheet/less" href="css/main.less">
+
+  <!-- Rather use `less.js` to dynamically compile your `stylesheet/less` files? -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.0/less-1.3.0.min.js"></script>
+  <script>window.less || document.write('<script src="js/less.min.js">\x3C/script>')</script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <h1 class="words"></h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span6 offset3">
+        <a href="#" class="btn new-word">Create</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>')</script>
+
+  <!-- Additional scripts -->
+  <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+  <script src="/js/words.js"></script>
+  <script src="/js/main.js"></script>
+
+
+  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+  <script>
+    var _gaq=[['_setAccount','UA-11117730-14'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+
+  <!-- Prompt IE < 8 users to install Chrome Frame. -->
+  <!--[if lt IE 8 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+</body>
+</html>

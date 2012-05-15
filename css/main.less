@@ -1,0 +1,213 @@
+@import "less/mixins.less";
+
+@green: #64a32f;
+@light: #fcfff9;
+
+body{
+    overflow-x: hidden;
+}
+h2{
+    font-size: 28px;
+    font-weight: 300;
+    padding-bottom: 8px;
+}
+p{
+    padding-right: 5px;
+}
+
+header{
+    .box-shadow(0 3px 3px rgba(0, 0, 0, .5));
+    #gradient > .horizontal(rgba(255, 255, 255, .95), rgba(255, 255, 255, .55));
+    height: 70px;
+    position: absolute;
+    width: 100%;
+    h1{
+        font-size: 28px;
+        font-weight: 300;
+        padding: 12px 0 0;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, .9);
+        top: 0;
+        z-index: 100;
+    }
+    img{
+        height: 40px;
+        padding-bottom: 30px;
+    }
+}
+
+.green{
+    background: url(/img/trash.png) no-repeat center center;
+    background-size: cover;
+    .row{
+        height: 450px;
+        position: relative;
+        img{
+            bottom: 0;
+            position: absolute;
+            width: 475px;
+        }
+    }
+    .tagline{
+        margin-top: 250px;
+        h3{
+            color: #f7faf4;
+            font-size: 36px;
+            font-weight: 300;
+            line-height: 1.2em;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, .75);
+        }
+    }
+    .gradient{
+        #gradient > .vertical(rgba(0, 0, 0, 0), rgba(0, 0, 0, .15));
+        height: 6px;
+        margin-top: -6px;
+        z-index: 500;
+    }
+}
+
+.features{
+    #gradient > .vertical(#333, #111);
+    border-top: 1px solid #292929;
+    color: @light;
+    padding: 50px 0;
+    text-shadow: 1px 1px 2px #111;
+}
+
+.messages{
+    #gradient > .vertical(#fff, @light);
+    padding: 25px 0 50px;
+    .row{
+        margin-top: 25px;
+    }
+}
+
+footer{
+    #gradient > .vertical(@green, darken(@green, 10%));
+    border-top: 1px solid darken(@green, 5%);
+    padding: 50px 0;
+    position: relative;
+    img{
+        display: block;
+        margin: 0 auto;
+        max-width: 300px;
+    }
+    .gradient{
+        #gradient > .vertical(darken(@green, 5%), @green);
+        height: 10px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.bottom-ribbon{
+    background: darken(@green, 15%);
+    height: 6px;
+}
+
+
+/*
+ * Tablet
+ */
+@media (max-width: 979px) and (min-width: 768px){
+    h2{
+        font-size: 24px;
+    }
+    .green{
+        .row{
+            height: 350px;
+            img{
+                width: 350px;
+            }
+        }
+        .tagline{
+            margin-top: 200px;
+            h3{
+                font-size: 26px;
+            }
+        }
+    }
+    footer{
+        img{
+            max-width: 200px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    body{
+        padding: 0;
+        .row{
+            margin: 0 auto;
+            width: 96%;
+        }
+        h2{
+            padding-top: 25px;
+        }
+    }
+    .green{
+        background: url(/img/trash.png) no-repeat 92% 50%;
+    }
+    .features{
+        padding: 0 0 25px;
+    }
+    .messages, footer{
+        padding: 25px 0;
+    }
+    footer img{
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    body{
+        padding: 0;
+        .row{
+            margin: 0 auto;
+            width: 96%;
+        }
+        h2{
+            padding-top: 25px;
+        }
+    }
+    .green{
+        background: url(/img/trash.png) no-repeat 92% 50%;
+        .row{
+            height: 350px;
+        }
+    }
+    .features{
+        padding: 0 0 25px;
+    }
+    .messages, footer{
+        padding: 25px 0;
+    }
+    .messages .row{
+        margin-top: 0px;
+    }
+    footer img{
+        max-width: 200px;
+    }
+}
+
+
+/*
+ * Large desktop
+ */
+@media (min-width: 1200px) {
+    .green{
+        .row{
+            height: 475px;
+            img{
+                width: auto;
+            }
+        }
+    }
+    h2{
+        font-size: 27px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

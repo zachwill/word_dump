@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+
+"""Small script to spit out random words."""
+
+from termcolor import cprint
+from worddump import juxtapose
+
+output = '\n  %s\n' % juxtapose()
+cprint(output, attrs=['bold'])
